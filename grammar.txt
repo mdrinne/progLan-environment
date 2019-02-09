@@ -11,7 +11,6 @@ includes : include
          | include includes
 
 include : HASH INCLUDE QUOTE ID DOT ID QUOTE
-        | HASH INCLUDE LESSTHAN ID DOT ID GREATERTHAN
 
 funcDef : FUNCTION ID OPAREN parameterList CPAREN block
 

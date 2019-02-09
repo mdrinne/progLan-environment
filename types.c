@@ -62,3 +62,6 @@ char *TIMESEQUALS = "TIMESEQUALS";
 char *DIVIDESEQUALS = "DIVIDESEQUALS";
 char *CALL = "CALL";
 char *NOTEQUALS = "NOTEQUALS";
+char *ENV = "ENV";
+char *TABLE = "TABLE";
+char *JOIN = "JOIN";

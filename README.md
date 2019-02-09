@@ -25,18 +25,11 @@ Print with 'call print()'
 ============================
 To run Lexer using makefile commands:
 
-  make : compiles scanner executable
+  make : compiles test-env executable
   
-  make test1 : runs recognizer on test1.txt, illegal
-  make test2 : runs recognizer on test2.txt, illegal
-  make test3 : runs recognizer on test3.txt, legal
-  make test4 : runs recognizer on test4.txt, legal
-  make test5 : runs recognizer on test5.txt, illegal
+  make run : compiles test-env executable and executes the test case
   
-  # for the sake of allowing the make run command to run all the way through, I used exit code 0 when reading a Syntax Error. This will be changed to a non zero exit code after testing
-  make run : compiles recognizer executable and executes all 5 test cases
-  
-  make clean : gets rid of all .o files and scanner executable
+  make clean : gets rid of all .o files and executables
   
   
 ============================

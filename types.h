@@ -62,3 +62,6 @@ char *TIMESEQUALS;
 char *DIVIDESEQUALS;
 char *CALL;
 char *NOTEQUALS;
+char *ENV;
+char *TABLE;
+char *JOIN;

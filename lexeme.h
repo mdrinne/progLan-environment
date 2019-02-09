@@ -4,6 +4,7 @@
  * cs403 Programming Languages
  */
 
+
 #ifndef __LEXEME_INCLUDED__
 #define __LEXEME_INCLUDED__
 
@@ -25,7 +26,7 @@ double  getLexemeRval(Lexeme *n);
 char   *getLexemeSval(Lexeme *n);
 char   *getLexemeID(Lexeme *n);
 int     getLineNum(Lexeme *n);
-Lexeme *newLexemeCons(char *type);
+Lexeme *cons(char *type, Lexeme *left, Lexeme *right);
 Lexeme *car(Lexeme *l); /* gets lchild */
 Lexeme *cdr(Lexeme *l); /* gets rchild */
 void    set_car(Lexeme *parent, Lexeme *child);

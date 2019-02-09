@@ -51,16 +51,6 @@ getLegal()
 }
 
 
-Lexeme *
-cons(char *type, Lexeme *left, Lexeme *right)
-{
-    Lexeme *n = newLexemeCons(type);
-    set_car(n,left);
-    set_cdr(n,right);
-    return n;
-}
-
-
 void
 program()
 {
@@ -120,22 +110,11 @@ include()
 {
     match(HASH);
     match(INCLUDE);
-    if (check(QUOTE))
-    {
-        match(QUOTE);
-        match(ID);
-        match(DOT);
-        match(ID);
-        match(QUOTE);
-    }
-    else
-    {
-        match(LESSTHAN);
-        match(ID);
-        match(DOT);
-        match(ID);
-        match(GREATERTHAN);
-    }
+    match(QUOTE);
+    match(ID);
+    match(DOT);
+    match(ID);
+    match(QUOTE);
 }
 
 

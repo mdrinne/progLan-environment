@@ -5,6 +5,10 @@
  */
 
 
+#ifndef __LEXER_INCLUDED__
+#define __LEXER_INCLUDED__
+
+
 #include "lexeme.h"
 
 
@@ -21,3 +25,5 @@ Lexeme *lexString();
 Lexeme *lex();
 void    getFile(FILE *f);
 int     getLine();
+
+#endif

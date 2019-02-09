@@ -1,9 +1,13 @@
 LOPTS = -Wall -Wextra -std=c99
-OBJS = lexer.o lexeme.o types.o scanner.o parser.o recognizer.o
+OBJS = lexer.o lexeme.o types.o scanner.o parser.o recognizer.o environment.o test-env.o
 
-make : recognizer scanner
+make : environment
 
-run : recognizer test1 test2 test3 test4 test5
+run : environment test1
+
+environment:
+	gcc $(LOPTS) -c test-env.c lexeme.c types.c environment.c
+	gcc $(LOPTS) test-env.c lexeme.o types.o environment.o -o test-env
 
 recognizer:
 	gcc $(LOPTS) -c recognizer.c lexer.c lexeme.c types.c parser.c
@@ -14,19 +18,19 @@ scanner :
 	gcc $(LOPTS) scanner.c lexer.o lexeme.o types.o -o scanner
 
 test1 :
-	recognizer test1.txt
+	./test-env
 
 test2 :
-	recognizer test2.txt
+	./recognizer test2.txt
 
 test3 :
-	recognizer test3.txt
+	./recognizer test3.txt
 
 test4 :
-	recognizer test4.txt
+	./recognizer test4.txt
 
 test5 :
-	recognizer test5.txt
+	./recognizer test5.txt
 
 clean :
-	rm -f $(OBJS) scanner recognizer
+	rm -f $(OBJS) scanner recognizer env

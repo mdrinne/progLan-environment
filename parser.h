@@ -5,6 +5,9 @@
  */
 
 
+#ifndef __PARSER_INCLUDED__
+#define __PARSER_INCLUDED__
+
 #include "lexeme.h"
 
 
@@ -12,7 +15,6 @@ Lexeme *advance();
 int     check(char *type);
 Lexeme *match(char *type);
 int     getLegal();
-Lexeme *cons(char *type, Lexeme *left, Lexeme *right);
 void    program();
 void    defs();
 int     defsPending();
@@ -62,3 +64,5 @@ void    statements();
 int     statementsPending();
 void    statement();
 int     statementPending();
+
+#endif

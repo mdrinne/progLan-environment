@@ -137,6 +137,16 @@ getLineNum(Lexeme *n)
 
 
 Lexeme *
+cons(char *type, Lexeme *left, Lexeme *right)
+{
+    Lexeme *n = newLexemeCons(type);
+    set_car(n,left);
+    set_cdr(n,right);
+    return n;
+}
+
+
+Lexeme *
 car(Lexeme *l)
 {
     return l->left;
