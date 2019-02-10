@@ -80,9 +80,9 @@ newEnv()
 
 
 Lexeme *
-extend(Lexeme *env, Lexeme *vals, Lexeme *vars)
+extend(Lexeme *env, Lexeme *vars, Lexeme *vals)
 {
-    return cons(ENV, cons(TABLE,vars,vals),env);
+    return cons(ENV,cons(TABLE,vars,vals),env);
 }
 
 
