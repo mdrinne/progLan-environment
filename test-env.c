@@ -61,5 +61,11 @@ main()
     Lexeme *env1_3 = extend(env1_2,car(car(env2)),cdr(car(env2)));
     printf("The environment is:\n");
     displayEnv(env1_3);
+    printf("Looking up value of str: %s\n", getLexemeSval(lookup(str,env1_3)));
+    printf("Updating value of str to 'hello dr. Lusth'\n");
+    Lexeme *newStrVal = newLexemeString("hello dr. Lusth",1);
+    update(env1_3,str,newStrVal);
+    printf("The environment is:\n");
+    displayEnv(env1_3);
     return 0;
 }

@@ -23,7 +23,7 @@ insertEnv(Lexeme *env, Lexeme *id, Lexeme * val)
 
 
 Lexeme *
-loopup(Lexeme *id, Lexeme *env)
+lookup(Lexeme *id, Lexeme *env)
 {
     Lexeme *vars;
     Lexeme *vals;
