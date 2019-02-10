@@ -20,17 +20,5 @@ scanner :
 test1 :
 	./test-env
 
-test2 :
-	./recognizer test2.txt
-
-test3 :
-	./recognizer test3.txt
-
-test4 :
-	./recognizer test4.txt
-
-test5 :
-	./recognizer test5.txt
-
 clean :
-	rm -f $(OBJS) scanner recognizer env
+	rm -f $(OBJS) scanner recognizer test-env
